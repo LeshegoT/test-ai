@@ -9,4 +9,5 @@ return { passed: true, output: out };
 const out = (e.stdout || e.message || '').toString();
 return { passed: false, output: out };
 }
+
 }

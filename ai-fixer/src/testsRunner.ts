@@ -1,9 +1,14 @@
-import { execSync } from 'node:child_process';
+import { test } from 'node:test';
+import { strictEqual } from 'assert';
+import { generateTestCases } from './testCasesGenerator';
 
+const runTest = (testCase: any) => {
+  // Add your test logic here
+};
 
-export function runTests(): { passed: boolean; output: string } {
-try {
-const out = execSync('npm test --silent', { stdio: 'pipe', encoding: 'utf8' });
+const runTests = async () => {
+  const testCases = await generateTestCases();
+```
 return { passed: true, output: out };
 } catch (e: any) {
 const out = (e.stdout || e.message || '').toString();
